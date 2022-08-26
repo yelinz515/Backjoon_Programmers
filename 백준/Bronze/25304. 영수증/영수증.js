@@ -12,9 +12,4 @@ for(let j=0; j<rec.length; j++){
     price += rec[j][0] * rec[j][1]
 }
 
-if(Number(input[0]) === price){
-    console.log("Yes")
-}
-else {
-    console.log("No")
-}
+console.log(Number(input[0]) === price ? "Yes" : "No")
