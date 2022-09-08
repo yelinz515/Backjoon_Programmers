@@ -1,15 +1,12 @@
-let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+let fs = require('fs')
+let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n')
 
-let rec = []
-for(let i = 2; i<input.length; i++){
-    rec.push(input[i].split(' '))
+let total = +input[0]
+let count = +input[1]
+let sum = 0
+
+for(let i =2; i<=count+1; i++){
+    let newArr = input[i].split(' ')
+    sum += newArr[0] * newArr[1]
 }
-rec.pop()
-
-let price = 0
-for(let j=0; j<rec.length; j++){
-    price += rec[j][0] * rec[j][1]
-}
-
-console.log(Number(input[0]) === price ? "Yes" : "No")
+console.log(total === sum ? "Yes" : "No")
