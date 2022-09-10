@@ -1,12 +1,9 @@
 function solution(n) {
-    var answer = 0;
-    
-    for(let i = 1; i<=Math.sqrt(n); i++){
+    let sum = 0
+    for(let i = 1; i<=n; i++){
         if(n % i === 0){
-            answer += i
-            if(n / i != i) answer += n / i
+            sum += i
         }
     }
-    
-    return answer;
+    return sum
 }
