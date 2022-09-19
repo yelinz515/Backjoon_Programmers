@@ -1,9 +1,5 @@
 let fs = require('fs')
-let input = fs.readFileSync('/dev/stdin').toString().split('\n')
+let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n')
 
-let sumList = input[1].split('').map(Number)
-let sum = 0
-for(let i=0; i<sumList.length; i++){
-    sum += sumList[i]
-}
-console.log(sum)
+let result = input[1].split('').map(Number).reduce((acc,cur) => acc + cur)
+console.log(result)
