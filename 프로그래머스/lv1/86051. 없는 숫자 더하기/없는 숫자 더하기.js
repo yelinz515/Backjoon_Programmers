@@ -1,10 +1,9 @@
 function solution(numbers) {
-    let num = [1,2,3,4,5,6,7,8,9,0]
     let sum = 0
     
-    for(let j = 0; j<num.length; j++){
-        if(!numbers.includes(num[j])){
-            sum += num[j]
+    for(let j = 0; j<10; j++){
+        if(!numbers.includes(j)){
+            sum += j
         }
     }
     return sum
