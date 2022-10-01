@@ -1,34 +1,40 @@
 let fs = require('fs')
 let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n')
 
-function sol(input) {
-  let answer = "";
-  const N = +input[0];
-  const numbers = input
-    .slice(1)
-    .map(Number)
-    .sort((a, b) => a - b); // 모든 숫자를 numbers 배열에 받아 오름차순 정렬
+let n = input.shift()
+let sortArr = input.map(Number).sort((a, b) => a - b)
 
-  answer += `${Math.round(numbers.reduce((s, v) => s + v, 0) / N)}\n`; // 산술평균
-  answer += `${numbers[Math.floor(N / 2)]}\n`; // 중앙값
+// 모든 결과 담을 문자열 생성
+let result = ''
 
-  const map = new Map();
-  let max = 1;
-  for (let number of numbers) {
-    if (map.has(number)) {
-      max = Math.max(max, map.get(number) + 1);
-      map.set(number, map.get(number) + 1);
-    } else map.set(number, 1);
-  } // map 자료구조를 통해 숫자 별 빈도수 기록
+// 평균
+let avg = Math.round(sortArr.reduce((acc, cur) => acc + cur) / n)
+result += `${avg}\n`
 
-  const maxArr = [];
-  for (let [key, val] of map) {
-    if (val === max) maxArr.push(key);
-  } // maxArr 배열에 최빈값 후보에 해당하는 모든 원소를 넣어준다.
+// 중앙값
+let mid = sortArr[Math.floor(n/2)]
+result += `${mid}\n`
 
-  answer += maxArr.length === 1 ? `${maxArr[0]}\n` : `${maxArr[1]}\n`;
-  // 최빈값이 여러개면 두번째로 작은 값, 1개라면 최빈값.
-  answer += `${numbers[N - 1] - numbers[0]}\n`; // 범위
-  return answer;
+// 최빈값
+const map = new Map();
+let max = 1;
+for (let number of sortArr) {
+if (map.has(number)) {
+  max = Math.max(max, map.get(number) + 1);
+  map.set(number, map.get(number) + 1);
+} else map.set(number, 1);
 }
-console.log(sol(input));
+
+const maxArr = [];
+for (let [key, val] of map) {
+if (val === max) maxArr.push(key);
+}
+
+let fre = maxArr.length === 1 ? maxArr[0] : maxArr[1]
+result += `${fre}\n`
+
+// 범위
+let scope = sortArr[n-1] - sortArr[0]
+result += `${scope}`
+
+console.log(result)
