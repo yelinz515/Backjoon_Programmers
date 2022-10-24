@@ -1,5 +1,3 @@
-// https://ddb8036631.github.io/boj/1918_%ED%9B%84%EC%9C%84-%ED%91%9C%EA%B8%B0%EC%8B%9D/
-
 const fs = require('fs')
 const input = fs.readFileSync('/dev/stdin').toString().trim()
 
