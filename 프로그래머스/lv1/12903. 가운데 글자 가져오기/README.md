@@ -1,10 +1,10 @@
 # [level 1] 가운데 글자 가져오기 - 12903 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12903?language=javascript) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12903?language=java) 
 
 ### 성능 요약
 
-메모리: 33.4 MB, 시간: 0.03 ms
+메모리: 67.7 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -12,32 +12,32 @@
 
 ### 채점결과
 
-<br/>정확성: 100.0<br/>합계: 100.0 / 100.0
+Empty
 
 ### 문제 설명
 
-<p style="user-select: auto;">단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.</p>
+<p>단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.</p>
 
-<h6 style="user-select: auto;">재한사항</h6>
+<h6>재한사항</h6>
 
-<ul style="user-select: auto;">
-<li style="user-select: auto;">s는 길이가 1 이상, 100이하인 스트링입니다.</li>
+<ul>
+<li>s는 길이가 1 이상, 100이하인 스트링입니다.</li>
 </ul>
 
-<h5 style="user-select: auto;">입출력 예</h5>
-<table class="table" style="user-select: auto;">
-        <thead style="user-select: auto;"><tr style="user-select: auto;">
-<th style="user-select: auto;">s</th>
-<th style="user-select: auto;">return</th>
+<h5>입출력 예</h5>
+<table class="table">
+        <thead><tr>
+<th>s</th>
+<th>return</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto;"><tr style="user-select: auto;">
-<td style="user-select: auto;">"abcde"</td>
-<td style="user-select: auto;">"c"</td>
+        <tbody><tr>
+<td>"abcde"</td>
+<td>"c"</td>
 </tr>
-<tr style="user-select: auto;">
-<td style="user-select: auto;">"qwer"</td>
-<td style="user-select: auto;">"we"</td>
+<tr>
+<td>"qwer"</td>
+<td>"we"</td>
 </tr>
 </tbody>
       </table>
