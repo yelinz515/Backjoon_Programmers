@@ -1,6 +1,7 @@
 class Solution {
     public String solution(String s) {
-        String answer = s.substring((s.length() -1) /2,s.length()/2 + 1);
-        return answer;
+        String str = null;
+        String[] sArr = s.split("");
+        return s.length() % 2 == 0 ? sArr[(s.length() / 2) - 1]+ sArr[s.length() / 2] : sArr[(s.length() -1) / 2] ;
     }
 }
